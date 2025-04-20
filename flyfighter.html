@@ -1,0 +1,158 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+   
+    <meta charset="UTF-8" />
+
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="style.css">
+    <title>flyfighter</title>
+  </head>
+  <body>
+    <h3 style="font-size: small;color: darkblue; height: 5px; margin-left: 40vw; margin-top: 0px; font-family:Verdana, Geneva, Tahoma, sans-serif;">Fly Fighter</h3>
+    <div id="container">
+        <div id="left">
+            <div id="score">
+              <h3 style="color: white; margin-top: 0px; margin-left: 30%;">Score</h3>
+           </div>
+        <div id="quotes">
+            <h3 style="color: white; margin-top: 0px; margin-left: 30%;">Quotes</h3>
+        </div>
+        <div id="highscore">
+            <h3 style="color: white; margin-top: 0px; font-size: small; margin-left: 10%;">HIGH SCORE</h3>
+        </div>
+      </div>
+        <div id="d1"><img id="flyImg" src="Images/fly_image.png" /></div>
+           <div id="right">
+           <div id="timer">
+            <h3 style="color: white; margin-top: 0px; margin-left: 20%;">TIMER</h3>
+        </div>
+        <img id="playImg" src="Images/play_img-removebg-preview.png">
+        <img id="retryImg" src="Images/retry_img-removebg-preview.png">
+        <img id="homeImg" src="Images/home_img.png">
+      </div>
+    </div>
+
+    <script>
+
+      var x, y,si;
+      var highscore=0,counter=0,webWorker,i=0,si2;
+      var flag=0
+      
+      var arr=["One swat at a time, you're the buzz-killer!","Focus. Smash. Win. Repeat!","They may fly, but they can’t hide!","Push limits, break records."];
+      
+      var score=document.getElementById("score"); 
+      var timer=document.getElementById("timer");  
+      
+      var flyImg = document.getElementById("flyImg");
+      flyImg.addEventListener("click",funCount);
+     
+      var playImg = document.getElementById("playImg");
+      playImg.addEventListener("click",funStart);
+
+      var retryImg = document.getElementById("retryImg");
+      retryImg.addEventListener("click",funRetry);
+
+      var highscorebox=document.getElementById("highscore");
+
+      var quotes=document.getElementById("quotes");
+
+      
+      //function to start the game
+      function funStart(){
+          flag=1;
+           si=setInterval("movefly()",1500);   //interval to traslate the fly
+           si2=setInterval("chooseQuotes()",3000);  //interval to choose quote from an array
+            
+            webWorker=new Worker("second.js");   //Web Workder
+
+              //event handler for message event
+              webWorker.onmessage=function(event){
+                var str='<h3 style="color: white; margin-top: 0px; margin-left: 20%;">TIMER</h3>'+
+                 '<h3 style="color: white; margin-top: 0px; margin-left: 42%; font-size:bold">00:'+event.data+'</h3>';
+                 timer.innerHTML=str;
+                 
+                 if(event.data ==30){
+                    webWorker.terminate();
+                    window.clearInterval(si);
+                    window.clearInterval(si2);
+                    highscore1();
+                    counter=0;
+                    flag=0;
+                 }
+      }
+      }
+       
+      //fucntion to restart the game
+      function funRetry(){
+        webWorker.terminate();
+        window.clearInterval(si);
+        window.clearInterval(si2);
+        var str='<h3 style="color: white; margin-top: 0px; margin-left: 30%;">Score</h3>'+
+                 '<h3 style="color: white; margin-top: 0px; margin-left: 42%; font-size:bold">'+counter+'</h3>';
+         score.innerHTML=str;
+         highscore1();
+         counter=0;
+          var str='<h3 style="color: white; margin-top: 0px; margin-left: 30%;">Score</h3>'+
+                 '<h3 style="color: white; margin-top: 0px; margin-left: 42%; font-size:bold">'+counter+'</h3>';
+         score.innerHTML=str;
+        funStart();
+      }
+
+
+
+       //function to count score of player
+      function funCount(){
+        if(flag==1){
+        counter++;
+        var str='<h3 style="color: white; margin-top: 0px; margin-left: 30%;">Score</h3>'+
+                 '<h3 style="color: white; margin-top: 0px; margin-left: 42%; font-size:bold">'+counter+'</h3>';
+         score.innerHTML=str;
+        }
+      }
+
+
+   // function to generate Random numbers
+      function generateRandom() {
+         x = Math.random() * 400;
+         y = Math.random() * 300;
+
+      }
+
+      //function to traslate fly
+      function movefly(){
+        generateRandom();
+      if (x < 420 && y < 310) {
+        flyImg.style.transform =
+          "translate(" + x + "px," + y + "px" + ")";
+      } else {
+        generateRandom();
+      }
+    }
+    
+    //function to calculate high score
+    function highscore1(){
+        if(counter > highscore){
+            highscore=counter;
+            console.log(highscore);
+             var str=' <h3 style="color: white; margin-top: 0px; font-size: small; margin-left: 10%;">HIGH SCORE</h3>'+
+                    '<h3 style="color: white; margin-top: 0px; margin-left: 42%; font-size:bold">'+highscore+'</h3>';
+         highscorebox.innerHTML=str;
+        }
+    }
+
+    //function to choose quote from an array
+    function chooseQuotes(){
+         var str=' <h3 style="color: white; margin-top: 0px; margin-left: 30%;">Quotes</h3>'+
+         '<h3 style="color: white; margin-top: 0px; font-size:bold">'+arr[i]+'</h3>';
+         quotes.innerHTML=str;
+         i++;
+         if(i==arr.length){
+            i=0;
+         }
+    }
+      
+      
+    </script>
+  </body>
+</html>

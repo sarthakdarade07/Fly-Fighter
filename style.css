@@ -1,0 +1,100 @@
+   body{
+    background-image: url(Images/body_background.avif);
+   }
+   
+   #d1 {
+        width: 60%;
+        height: 350px;
+        border: 2px solid yellow;
+        border-bottom: none;
+        border-top: none;
+        margin: auto;
+        cursor: cell;
+        background-image: url(Images/game\ arena.jpeg);
+        background-size: contain;
+        overflow: hidden;
+      }
+      
+      #flyImg {
+        height: 40px;
+        width: 40px;
+      }
+
+      #container {
+        width: 93vw;
+        height: 350px;
+        border: 2px solid yellow;
+        overflow: hidden;
+        margin: auto;
+        display: flex;
+        border-radius: 5px;
+      }
+
+      #left {
+        height: 350x;
+        width: 20%;
+        padding: 5px;
+        background-image: url(Images/sidepannel_img.png);
+      }
+
+       #right {
+        height: 350x;
+        width: 20%;
+        padding: 5px;
+        background-image: url(Images/sidepannel_img.png);
+      }
+
+      #score{
+        height: 15vh;
+        width: 90%;
+        border: 2px solid yellow;
+        margin: auto;
+        border-radius: 4px;
+      }
+
+       #quotes{
+        height: 40vh;
+        width: 90%;
+        border: 2px solid yellow;
+        margin: auto;
+        margin-top: 5vh;
+        border-radius: 4px;
+      }
+
+       #highscore{
+       height: 15vh;
+        width: 90%;
+        border: 2px solid yellow;
+        margin: auto;
+        margin-top: 7vh;
+        border-radius: 4px;
+      }
+
+       #timer{
+        height: 15vh;
+        width: 90%;
+       border: 2px solid yellow;
+        margin: auto;
+        border-radius: 4px;
+      }
+        #playImg{
+        height: 50px;
+        width: 50px;
+        margin-top: 40px;
+        margin-left: 40px;
+      }
+
+
+      #retryImg{
+        height: 50px;
+        width: 50px;
+        margin-top: 40px;
+        margin-left: 40px;
+      }
+
+       #homeImg{
+        height: 100px;
+        width: 100px;
+        margin-left: 15px;
+      }
+
