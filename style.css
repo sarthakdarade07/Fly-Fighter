@@ -1,11 +1,13 @@
    body{
     background-image: url(Images/body_background.avif);
+    background-size: contain;
+    font-size: 4vh;
    }
    
    #d1 {
         width: 60%;
-        height: 350px;
-        border: 2px solid yellow;
+        height: 100%;
+        border: 0.3vw solid yellow;
         border-bottom: none;
         border-top: none;
         margin: auto;
@@ -13,43 +15,46 @@
         background-image: url(Images/game\ arena.jpeg);
         background-size: contain;
         overflow: hidden;
+        background-size: contain;
       }
       
       #flyImg {
-        height: 40px;
-        width: 40px;
+        height: 6vw;
+        width: 6vh;
       }
 
       #container {
         width: 93vw;
-        height: 350px;
-        border: 2px solid yellow;
+        height: 90vh;
+        border: 0.3vw solid yellow;
         overflow: hidden;
         margin: auto;
         display: flex;
-        border-radius: 5px;
+        border-radius: 0.3vw;
       }
 
       #left {
-        height: 350x;
+        height: 100%;
         width: 20%;
-        padding: 5px;
+        padding: 0.3vw;
         background-image: url(Images/sidepannel_img.png);
+        background-size: contain;
       }
 
        #right {
-        height: 350x;
+        height: 100%;
         width: 20%;
-        padding: 5px;
+        padding: 0.3vw;
         background-image: url(Images/sidepannel_img.png);
+        background-size: contain;
       }
 
       #score{
         height: 15vh;
         width: 90%;
-        border: 2px solid yellow;
+        border: 0.3vw solid yellow;
         margin: auto;
-        border-radius: 4px;
+        border-radius: 0.2vw;
       }
 
        #quotes{
@@ -58,43 +63,43 @@
         border: 2px solid yellow;
         margin: auto;
         margin-top: 5vh;
-        border-radius: 4px;
+        border-radius: 0.3vw;
       }
 
        #highscore{
        height: 15vh;
         width: 90%;
-        border: 2px solid yellow;
+        border:  0.3vw solid yellow;
         margin: auto;
         margin-top: 7vh;
-        border-radius: 4px;
+        border-radius: 0.3vw;
       }
 
        #timer{
         height: 15vh;
         width: 90%;
-       border: 2px solid yellow;
+       border: 0.3vw solid yellow;
         margin: auto;
-        border-radius: 4px;
+        border-radius: 0.3vw;
       }
         #playImg{
-        height: 50px;
-        width: 50px;
-        margin-top: 40px;
-        margin-left: 40px;
+        height: 13vh;
+        width: 7vw;
+        margin-top: 5vw;
+        margin-left: 5vw;
       }
 
 
       #retryImg{
-        height: 50px;
-        width: 50px;
-        margin-top: 40px;
-        margin-left: 40px;
+        height: 13vh;
+        width: 7vw;
+        margin-top: 5vw;
+        margin-left: 5vw;
       }
 
        #homeImg{
-        height: 100px;
-        width: 100px;
-        margin-left: 15px;
+        height: 20vh;
+        width: 14vw;
+        margin-left: 2vw;
       }
 
