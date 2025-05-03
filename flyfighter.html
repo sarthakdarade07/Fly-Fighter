@@ -5,7 +5,7 @@
     <meta charset="UTF-8" />
 
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="flyfighter.css">
     <title>flyfighter</title>
   </head>
   <body>
@@ -29,7 +29,7 @@
         </div>
         <img id="playImg" src="Images/play_img-removebg-preview.png">
         <img id="retryImg" src="Images/retry_img-removebg-preview.png">
-        <img id="homeImg" src="Images/home_img.png">
+       <a href="index.html"><img id="homeImg" src="Images/home_img.png"></a>
       </div>
     </div>
 
@@ -135,9 +135,9 @@
         if(counter > highscore){
             highscore=counter;
             console.log(highscore);
-             var str=' <h3 style="color: white; margin-top: 0px; font-size: 5vh; margin-left: 10%;">HIGH SCORE</h3>'+
-                    '<h3 style="color: white; margin-top: 0px; margin-left: 42%; font-size:bold">'+highscore+'</h3>';
-         highscorebox.innerHTML=str;
+             var str=' <h3 style="color: white; margin-top: 0px; font-size: 4vh; margin-left: 10%;">HIGH SCORE</h3>'+
+                    '<h3 style="color: white; margin-top: 2vh; margin-left: 42%; font-size:bold">'+highscore+'</h3>';
+                         highscorebox.innerHTML=str;
         }
     }
 

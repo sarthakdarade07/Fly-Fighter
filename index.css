@@ -1,0 +1,106 @@
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+  
+}
+
+body {
+  font-family: "Arial", sans-serif;
+  background-color: #ffdd00;
+  margin: 0;
+  font-size: 2vw;
+  
+}
+
+
+.container{
+
+    max-width:80vw;
+    height: 90vh;
+    margin: auto;
+    margin-top: 3vh;
+    background-image: url("Images/index_background_image.jpeg");
+    background-size: contain;
+    border: 0.2vw solid white;
+    border-radius: 0.8vw;
+    box-shadow: 0.8vw 0.8vw 0.5vw rgb(71, 71, 71);
+    display: flex;
+    justify-content: center ;
+    align-items: center;
+    flex-direction: column;
+}
+#logo_img{
+    margin-top: -30vh;
+    height: 30vh;
+    width: 50vw;
+}
+#play{
+    margin-top: 25vh;
+    width: 20vw;
+    height: 6vh;
+    background-color: #3c096c;
+    color: white;
+    border-radius: 0.2vw;
+    border: 0.2vw solid yellow;
+
+}
+
+#info{
+    margin-top: 4vh;
+    width: 20vw;
+    height: 6vh;
+    background-color: #3c096c;
+    color: white;
+    border-radius: 0.2vw;
+    border: 0.2vw solid yellow;
+
+}
+
+#play:hover,#info:hover{
+    background-color:#da1e37;
+}
+
+#info-box{
+    width: 80vw;
+    background-color: #3c096c;
+    margin: auto;
+    border-radius: 1vw;
+    color: gold;
+    padding: 3vw;
+    font-size: 2.5vw;
+}
+
+#footer{
+    color: white;
+    padding: 5vw;
+    margin-top:20vh;
+    background-color: #222f3e;
+    border-top-left-radius:2vw ;
+    border-top-right-radius:2vw ;
+    flex-direction: row;
+    justify-content: space-evenly;
+}
+
+#devolop_header{
+    margin-left: 33vw;
+}
+
+
+
+#footer_used_technologies,#footer_contact,#version,#footer_how_to_play{
+   font-size: small; 
+   margin-left: 3vw;
+}
+
+#other_projects{
+     font-size: small; 
+   margin-left: 6.2vw;
+}
+
+#follow_us_insta{
+     font-size: small; 
+   margin-left: 9.2vw;
+   text-decoration: none;
+   color: white;
+}
