@@ -9,6 +9,7 @@
     <title>flyfighter</title>
   </head>
   <body>
+     <audio id="playSound" controls src="Audio/click_sound.mp3" preload="auto" style="display:none"></audio>
     <h3 style="font-size: 4vh;color: darkblue; height: 2vh; margin-left: 40vw; margin-top: 0px; font-family:Verdana, Geneva, Tahoma, sans-serif;">Fly Fighter</h3>
     <div id="container">
         <div id="left">
@@ -29,7 +30,7 @@
         </div>
         <img id="playImg" src="Images/play_img-removebg-preview.png">
         <img id="retryImg" src="Images/retry_img-removebg-preview.png">
-       <a href="index.html"><img id="homeImg" src="Images/home_img.png"></a>
+       <img id="homeImg" src="Images/home_img.png" onclick="funHome()">
       </div>
     </div>
 
@@ -57,9 +58,12 @@
 
       var quotes=document.getElementById("quotes");
 
+       var audio1=document.getElementById("playSound");
+
       
       //function to start the game
       function funStart(){
+        audio1.play();
           flag=1;
            si=setInterval("movefly()",1500);   //interval to traslate the fly
            si2=setInterval("chooseQuotes()",3000);  //interval to choose quote from an array
@@ -85,6 +89,7 @@
        
       //fucntion to restart the game
       function funRetry(){
+         audio1.play();
         webWorker.terminate();
         window.clearInterval(si);
         window.clearInterval(si2);
@@ -99,6 +104,16 @@
         funStart();
       }
 
+
+      //fuction to manage home button
+      function funHome(){
+         audio1.play();
+  
+       setTimeout(()=>{
+            window.location.href = "index.html";
+            },800)
+          }
+      
 
 
        //function to count score of player

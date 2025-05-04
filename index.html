@@ -12,8 +12,12 @@
 
     <div class="container">
         <img src="Images/fly_fighter_logo_index_page.png" id="logo_img"/>
-        <a href="flyfighter.html"><input id="play" type="button" value="Play" /></a>
-        <a href="info.html"><input id="info" type="button" value="Info"/></a>
+
+        <input id="play" type="button" value="Play" onclick="playClick()" />
+        <input id="info" type="button" value="Info" onclick="infoClick()"/>
+
+        <audio id="playSound" controls src="Audio/click_sound.mp3" preload="auto" style="display:none"></audio>
+       
     </div>
 
 
@@ -39,6 +43,29 @@
   </div>
 </footer>
 
+<script>
+  var play=document.getElementById("play");
+  var jmp_play=document.getElementById("jump_to_play");
+  var audio1=document.getElementById("playSound");
+
+  function playClick(){
+   audio1.play();
+  
+    setTimeout(()=>{
+      window.location.href = "flyfighter.html";
+    },800)
+  }
+
+function infoClick(){
+    audio1.play();
+  
+    setTimeout(()=>{
+      window.location.href = "info.html";
+    },800)
+  }
+
+  
+</script>
     
 </body>
 </html>
