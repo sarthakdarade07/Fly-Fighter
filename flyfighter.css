@@ -39,6 +39,7 @@
         padding: 0.3vw;
         background-image: url(Images/sidepannel_img.png);
         background-size: contain;
+        
       }
 
        #right {
@@ -47,6 +48,9 @@
         padding: 0.3vw;
         background-image: url(Images/sidepannel_img.png);
         background-size: contain;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
       }
 
       #score{
@@ -86,21 +90,35 @@
         height: 13vh;
         width: 7vw;
         margin-top: 5vw;
-        margin-left: 5vw;
+        /* margin-left: 5vw; */
       }
 
 
       #retryImg{
         height: 13vh;
         width: 7vw;
-        margin-top: 5vw;
-        margin-left: 5vw;
+        margin-top: 2vw;
+        /* margin-left: 5vw; */
       }
 
        #homeImg{
         height: 20vh;
         width: 14vw;
-        margin-left: 2vw;
+        /* margin-left: 2vw; */
+      }
+
+       #muteImg{
+        margin-bottom: 1vw;
+        height: 10vh;
+        width: 6.5vw;
+        /* margin-left: 2vw; */
+      }
+
+       #soundImg{
+        margin-bottom: 1vw;
+        height: 10vh;
+        width: 6.5vw;
+        /* margin-left: 2vw; */
       }
 
 
