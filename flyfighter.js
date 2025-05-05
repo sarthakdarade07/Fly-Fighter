@@ -36,6 +36,8 @@ var audio1 = document.getElementById("clickSound"); //audio1=click sound
 
 var d1 = document.getElementById("d1");
 
+var bigCursor=document.getElementById('big-cursor');
+
 // sound manage
 var sound = "on";
 var mute_img = document.getElementById("muteImg");
@@ -204,3 +206,11 @@ function funSound() {
     audio1.play();
   }
 }
+
+d1.addEventListener("mousemove",  (e)=> {
+  const cursor = document.getElementById("big-cursor");
+  cursor.style.display='inline';
+  cursor.style.left = e.clientX + "px";
+  cursor.style.top = e.clientY + "px";
+});
+

@@ -1,126 +1,132 @@
-   body{
-    background-image: url(Images/body_background.avif);
-    background-size: contain;
-    font-size: 4vh;
-   }
-   
-   #d1 {
-        width: 60%;
-        height: 100%;
-        border: 0.3vw solid yellow;
-        border-bottom: none;
-        border-top: none;
-        margin: auto;
-        cursor: cell;
-        background-image: url(Images/game\ arena.jpeg);
-        background-size: contain;
-        overflow: hidden;
-        background-size: contain;
-      }
-      
-      #flyImg {
-        height: 6vw;
-        width:6vw;
-      }
+body {
+  background-image: url(Images/body_background.avif);
+  background-size: contain;
+  font-size: 4vh;
+}
 
-      #container {
-        width: 93vw;
-        height: 90vh;
-        border: 0.3vw solid yellow;
-        overflow: hidden;
-        margin: auto;
-        display: flex;
-        border-radius: 0.3vw;
-      }
-
-      #left {
-        height: 100%;
-        width: 20%;
-        padding: 0.3vw;
-        background-image: url(Images/sidepannel_img.png);
-        background-size: contain;
-        
-      }
-
-       #right {
-        height: 100%;
-        width: 20%;
-        padding: 0.3vw;
-        background-image: url(Images/sidepannel_img.png);
-        background-size: contain;
-        display: flex;
-        flex-direction: column;
-        align-items: center;
-      }
-
-      #score{
-        height: 15vh;
-        width: 90%;
-        border: 0.3vw solid yellow;
-        margin: auto;
-        border-radius: 0.2vw;
-      }
-
-       #quotes{
-        height: 40vh;
-        width: 90%;
-        border: 0.3vw solid yellow;
-        margin: auto;
-        margin-top: 5vh;
-        border-radius: 0.3vw;
-      }
-
-       #highscore{
-       height: 15vh;
-        width: 90%;
-        border:  0.3vw solid yellow;
-        margin: auto;
-        margin-top: 7vh;
-        border-radius: 0.3vw;
-      }
-
-       #timer{
-        height: 15vh;
-        width: 90%;
-       border: 0.3vw solid yellow;
-        margin: auto;
-        border-radius: 0.3vw;
-      }
-        #playImg{
-        height: 13vh;
-        width: 7vw;
-        margin-top: 5vw;
-        /* margin-left: 5vw; */
-      }
+#d1 {
+  width: 60%;
+  height: 100%;
+  border: 0.3vw solid yellow;
+  border-bottom: none;
+  border-top: none;
+  margin: auto;
+  cursor: none;
+  background-image: url(Images/game\ arena.jpeg);
+  background-size: contain;
+  overflow: hidden;
+  background-size: contain;
+}
 
 
-      #retryImg{
-        height: 13vh;
-        width: 7vw;
-        margin-top: 2vw;
-        /* margin-left: 5vw; */
-      }
 
-       #homeImg{
-        height: 20vh;
-        width: 14vw;
-        /* margin-left: 2vw; */
-      }
-
-       #muteImg{
-        margin-bottom: 1vw;
-        height: 10vh;
-        width: 6.5vw;
-        /* margin-left: 2vw; */
-      }
-
-       #soundImg{
-        margin-bottom: 1vw;
-        height: 10vh;
-        width: 6.5vw;
-        /* margin-left: 2vw; */
-      }
+#big-cursor {
+  position: fixed;
+  width: 10vw;
+  height: 20vh;
+  pointer-events: none; /* Let clicks pass through */
+  z-index: 9999;
+  transform: translate(-32px, -32px); /* Move image so center is at mouse point */
+}
 
 
-  
+#flyImg {
+  height: 6vw;
+  width: 6vw;
+}
 
+#container {
+  width: 93vw;
+  height: 90vh;
+  border: 0.3vw solid yellow;
+  overflow: hidden;
+  margin: auto;
+  display: flex;
+  border-radius: 0.3vw;
+}
+
+#left {
+  height: 100%;
+  width: 20%;
+  padding: 0.3vw;
+  background-image: url(Images/sidepannel_img.png);
+  background-size: contain;
+}
+
+#right {
+  height: 100%;
+  width: 20%;
+  padding: 0.3vw;
+  background-image: url(Images/sidepannel_img.png);
+  background-size: contain;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+#score {
+  height: 15vh;
+  width: 90%;
+  border: 0.3vw solid yellow;
+  margin: auto;
+  border-radius: 0.2vw;
+}
+
+#quotes {
+  height: 40vh;
+  width: 90%;
+  border: 0.3vw solid yellow;
+  margin: auto;
+  margin-top: 5vh;
+  border-radius: 0.3vw;
+}
+
+#highscore {
+  height: 15vh;
+  width: 90%;
+  border: 0.3vw solid yellow;
+  margin: auto;
+  margin-top: 7vh;
+  border-radius: 0.3vw;
+}
+
+#timer {
+  height: 15vh;
+  width: 90%;
+  border: 0.3vw solid yellow;
+  margin: auto;
+  border-radius: 0.3vw;
+}
+#playImg {
+  height: 13vh;
+  width: 7vw;
+  margin-top: 5vw;
+  /* margin-left: 5vw; */
+}
+
+#retryImg {
+  height: 13vh;
+  width: 7vw;
+  margin-top: 2vw;
+  /* margin-left: 5vw; */
+}
+
+#homeImg {
+  height: 20vh;
+  width: 14vw;
+  /* margin-left: 2vw; */
+}
+
+#muteImg {
+  margin-bottom: 1vw;
+  height: 10vh;
+  width: 6.5vw;
+  /* margin-left: 2vw; */
+}
+
+#soundImg {
+  margin-bottom: 1vw;
+  height: 10vh;
+  width: 6.5vw;
+  /* margin-left: 2vw; */
+}
