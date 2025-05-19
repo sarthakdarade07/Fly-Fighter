@@ -61,7 +61,7 @@ function funStart() {
     window.clearInterval(si2);
   }
   flag = 1;
-  si = setInterval("movefly()", 1500); //interval to traslate the fly
+  si = setInterval("movefly()", 1100); //interval to traslate the fly
   si2 = setInterval("chooseQuotes()", 3000); //interval to choose quote from an array
 
   webWorker = new Worker("second.js"); //Web Workder
@@ -149,8 +149,13 @@ function funCount() {
 
 // function to generate Random numbers
 function generateRandom() {
-  x = Math.random() * d1.offsetHeight;
-  y = Math.random() * d1.offsetWidth;
+  const flyWidth = flyImg.offsetWidth;
+  const flyHeight = flyImg.offsetHeight;
+  const maxY = d1.offsetHeight - flyHeight;
+  const maxX = d1.offsetWidth - flyWidth;
+
+  x = Math.random() * maxX;
+  y = Math.random() * maxY;
 }
 
 //function to traslate fly
