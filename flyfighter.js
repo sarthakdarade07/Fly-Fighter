@@ -61,7 +61,7 @@ function funStart() {
     window.clearInterval(si2);
   }
   flag = 1;
-  si = setInterval("movefly()", 800); //interval to traslate the fly
+  si = setInterval("movefly()", 1000); //interval to traslate the fly
   si2 = setInterval("chooseQuotes()", 3000); //interval to choose quote from an array
 
   webWorker = new Worker("second.js"); //Web Workder
