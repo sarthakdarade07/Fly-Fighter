@@ -20,7 +20,7 @@ var score = document.getElementById("score");
 var timer = document.getElementById("timer");
 
 var flyImg = document.getElementById("flyImg");
-flyImg.addEventListener("click", funCount);
+flyImg.addEventListener("mousedown", funCount);
 
 var playImg = document.getElementById("playImg");
 playImg.addEventListener("click", funStart);
